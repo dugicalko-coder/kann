@@ -1,0 +1,34 @@
+export type Article = {
+  id: number;
+  slug: string;
+  title: string;
+  teaser: string;
+  body: string;
+  body_format: string;
+  category: string;
+  cats: string;
+  kind: string;
+  author: string;
+  image: string | null;
+  image_alt: string | null;
+  ai_image: number;
+  sources: string;
+  faq: string;
+  status: string;
+  published_at: string;
+  updated_at: string;
+};
+export type ArticleCard = Omit<Article, "body" | "sources" | "faq">;
+export type Lead = {
+  id: number;
+  created_at: string;
+  project: string;
+  bundesland: string;
+  timeline: string;
+  name: string;
+  phone: string;
+  email: string | null;
+  message: string | null;
+  page: string | null;
+  status: string;
+};
